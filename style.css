@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+
+:root{
+    /* primary */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--Off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    margin-top: 10rem;
+    background: var(--White);
+    width: 55rem;
+    height: 40rem;
+    padding: 50px;
+    border-radius: 25px 25px 25% 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fields{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+    
+}
+
+.field span{
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.field input{
+    font-size: 35px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 6px;
+    padding: 8px 0 8px 20px;
+    width: 4.5em;
+    cursor: pointer;
+}
+
+.field input:focus, .field input:hover{
+    border: 1px solid var(--Off-black);
+}
+
+.cutter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5% 0;
+}
+
+.cutter hr{
+    width: 100%;
+    height: 0;
+    color: var(--Light-grey, transparent);
+}
+
+.cutter button{
+    position: absolute;
+    right: 0;
+    border-style: none;
+    background: var(--Purple);
+    border-radius: 100%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.cutter button:hover{
+    background-color: var(--Off-black);
+}
+
+.outputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.no{
+    color: var(--Purple);
+}
+
+@media (max-width: 735px) {
+    .wrapper{
+        width: 95%;
+    }
+    .field, .field input{
+        font-size: 1.2em;
+    }
+    .cutter button{
+        padding: 10px;
+    }
+    .outputs{
+        font-size: 5em;
+    }
+}
+@media (max-width: 425px) {
+    .wrapper{
+        padding: 30px;
+        height: 80%;
+    }
+    .fields{
+        justify-content: space-between;
+    }
+    .field input{
+        padding: 10px;
+        width: 3.6em;
+    }
+    .cutter{
+        margin: 20% 0;
+    }
+    .cutter button{
+        padding: 10px;
+        right: 40%;
+        border-radius: 50%;
+    }
+    .outputs{
+        font-size: 55px;
+    }
+}
